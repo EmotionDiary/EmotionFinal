@@ -234,11 +234,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         });
     }
 
+    public void onNextListener(View view) {
+        Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
+        startActivity(intent);
+    }
+
     private class SessionCallback implements ISessionCallback {
 
         @Override
-        public void onSessionOpened() {
-            request();
+        public void onSessionOpened() {request();
         }
 
         @Override
@@ -319,5 +323,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void onKakaoButtonClicked(View view) {
 
     }
+
+
 
 }

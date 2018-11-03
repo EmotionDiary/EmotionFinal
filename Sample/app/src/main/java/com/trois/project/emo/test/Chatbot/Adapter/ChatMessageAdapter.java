@@ -126,6 +126,7 @@ class ChatMessageViewHolder extends RecyclerView.ViewHolder {
                 singleItem_start.add(sm);
 
 
+
                 dm_start.setAllItemsInSection(singleItem_start);
                 array_action_start.add(dm_start);
 
