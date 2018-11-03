@@ -36,11 +36,20 @@
         android:background="@color/colorPrimary"
         android:onClick="onGoogleButtonClicked"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:onClick="onNextListener"
+        android:text="다음"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom|right"
         android:text="Trois-Jumper"
         />
+
+
 
 </LinearLayout>
