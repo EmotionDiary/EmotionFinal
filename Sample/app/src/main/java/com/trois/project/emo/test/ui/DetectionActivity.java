@@ -55,6 +55,7 @@ import com.microsoft.projectoxford.face.contract.Emotion;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.HeadPose;
 import com.trois.project.emo.test.R;
+import com.trois.project.emo.test.TwoFragment;
 import com.trois.project.emo.test.helper.ImageHelper;
 import com.trois.project.emo.test.helper.LogHelper;
 import com.trois.project.emo.test.helper.SampleApp;
@@ -70,6 +71,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DetectionActivity extends AppCompatActivity {
+
     // Background task of face detection.
     private class DetectionTask extends AsyncTask<InputStream, String, Face[]> {
         private boolean mSucceed = true;
@@ -243,6 +245,11 @@ public class DetectionActivity extends AppCompatActivity {
     // View the log of service calls.
     public void viewLog(View view) {
         Intent intent = new Intent(this, DetectionLogActivity.class);
+        startActivity(intent);
+    }
+
+    public void onSaveListener(View view) {
+        Intent intent = new Intent(this, TwoFragment.class);
         startActivity(intent);
     }
 

@@ -25,7 +25,7 @@ public class CustomAdapter extends FragmentStatePagerAdapter {
                 return three;
 
                 default :
-                return new ThreeFragment();
+                return new TwoFragment();
         }
     }
 

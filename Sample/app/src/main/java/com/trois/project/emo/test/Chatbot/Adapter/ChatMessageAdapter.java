@@ -125,8 +125,6 @@ class ChatMessageViewHolder extends RecyclerView.ViewHolder {
                 SingleItemModel sm = new SingleItemModel("감정 기록하기", Constant.ACTION_START);
                 singleItem_start.add(sm);
 
-
-
                 dm_start.setAllItemsInSection(singleItem_start);
                 array_action_start.add(dm_start);
 
