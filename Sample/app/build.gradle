@@ -31,7 +31,8 @@ android {
 
 
         release {
-            storeFile file('\\yeji\\Desktop\\EmotionFinal-masterSample\\Sample\\app\\test.jks')
+
+            storeFile file('‎\\cho-yoonyoung\\Desktop\\파일 뭉치\\Android_Pro\\EmotionRecognition\\Sample\\app\\test.jks')
             // 기준은 App 폴더 기준이다.
 
             storePassword "960727"
@@ -88,3 +89,4 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
+//include ':app'

@@ -1,6 +1,7 @@
 package com.trois.project.emo.test.Chatbot.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
@@ -18,6 +19,7 @@ import com.trois.project.emo.test.Chatbot.Model.Emotion;
 import com.trois.project.emo.test.Chatbot.Utils.Constant;
 import com.trois.project.emo.test.Chatbot.Utils.DateFormat;
 import com.trois.project.emo.test.R;
+import com.trois.project.emo.test.ui.FaceActivity;
 
 import java.util.ArrayList;
 
@@ -66,7 +68,7 @@ public class ChatBotActivity extends AppCompatActivity {
                 chats.add(chat);
 
                 if (getMessage().contains(Constant.ACTION_START)) {
-                    chat = new Chat(current_name, current_room_no, DateFormat.date_apm(), "안녕하세요. Emo에요~ 당신의 감정을 알려주세요", false, Constant.ACTION_TEXT);
+                    chat = new Chat(current_name, current_room_no, DateFormat.date_apm(), "안녕하세요. Emo에요~ 더 알고 싶은 것이 있나요?", false, Constant.ACTION_TEXT);
                 }
                 if (getMessage().contains(Constant.ACTION_DONE)) {
                     chat = new Chat(current_name, current_room_no, DateFormat.date_apm(), "당신 안녕", false, Constant.ACTION_TEXT);
@@ -77,6 +79,10 @@ public class ChatBotActivity extends AppCompatActivity {
                     chat = new Chat(current_name, current_room_no, DateFormat.date_apm(), "나도 사랑해", false, Constant.ACTION_TEXT);
                     //mWebSocketClient.send(ChatUtils.chat_to_json_text(chat));
                     chats.add(chat);
+                }
+                if(getMessage().contains("check emotion")) {
+                    Intent intent = new Intent(getApplicationContext(), FaceActivity.class);
+                    startActivityForResult(intent, 50);
                 }
 
 

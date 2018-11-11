@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.trois.project.emo.test.Chatbot.Activity.ChatBotActivity;
 import com.trois.project.emo.test.Chatbot.Model.Chat;
 import com.trois.project.emo.test.Chatbot.Model.SingleItemModel;
-import com.trois.project.emo.test.Chatbot.Utils.DateFormat;
-import com.trois.project.emo.test.Chatbot.Activity.ChatBotActivity;
 import com.trois.project.emo.test.Chatbot.Utils.Constant;
+import com.trois.project.emo.test.Chatbot.Utils.DateFormat;
 
 import java.util.ArrayList;
 
@@ -70,7 +70,13 @@ public class SectionListDataAdapter  extends RecyclerView.Adapter<SectionListDat
                 public void onClick(View v) {
 
 
-                    Toast.makeText(v.getContext(), tvCode.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), "감정인식 창으로 넘어갑니다", Toast.LENGTH_SHORT).show();
+
+
+                    //Intent intent = new Intent(v.getContext(), FaceActivity.class);
+                    //startActivityForResult(intent, 50);
+
+                    //Toast.makeText(v.getContext(), tvCode.getText(), Toast.LENGTH_SHORT).show();
 
                     Chat chat_mine = new Chat("11", ChatBotActivity.current_room_no, DateFormat.date_apm(), tvTitle.getText().toString(), true, Constant.ACTION_TEXT);
                     //mWebSocketClient.send(ChatUtils.chat_to_json_text(chat_mine));
